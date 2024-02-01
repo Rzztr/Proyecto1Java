@@ -22,9 +22,6 @@ public class mainVentas {
         Producto p8 = new Producto("Yogur", 10.25);
         Producto p9 = new Producto("Manzanas", 7.50);
         Producto p10 = new Producto("Café", 40.00);
-        //objeto de orden para importar metodos
-        
-
         
         System.out.println("LIMITE DE PRODUCTOS POR ORDEN: 3");
         orden1.agregarProd(p1);

@@ -4,8 +4,8 @@ public class Orden extends Producto {
 
     private int idOrden = 0001;
     private static int contadorId;
-    private Producto[] productos; // Cambiado a un arreglo de Producto
-    private int contadorProductos; // Nuevo atributo para llevar la cuenta de productos agregados
+    private Producto[] productos; 
+    private int contadorProductos; 
 
     public Orden(String nombre, double precio) {
         super(nombre, precio);
