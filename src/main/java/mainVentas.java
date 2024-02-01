@@ -33,9 +33,11 @@ public class mainVentas {
         
         while (loop==true){
             System.out.println("----------------------------!---------------------");
-            System.out.println("Que quiee hacer con la lista?"
-                + "1. Mostrtar los productos"
-                + "2. ver el total");
+            System.out.println("""
+                               Que quiee hacer con la lista?'
+                               1. Mostrtar los productos'
+                               2. ver el total
+                               99- Salir""");
             System.out.println("----------------------------!---------------------");
             entrada = scanner.nextInt();
         
@@ -50,6 +52,7 @@ public class mainVentas {
                     loop=false;
                     break;
                 default:
+                    System.out.println("Adios!!");
                     loop=false;
             }
         }
