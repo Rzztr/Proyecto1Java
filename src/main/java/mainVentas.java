@@ -6,11 +6,11 @@ import java.util.Scanner;
 public class mainVentas {
     public static void main(String[] args) {
         int entrada;
-        int cantidad0=1;
+        boolean loop=true;
         
         //objetos productos
         Scanner scanner = new Scanner(System.in);
-        //objeto de orden para importar metodos
+        Orden orden1 = new Orden("", 00);
         
         Producto p1 = new Producto("Papitas", 22.00);
         Producto p2 = new Producto("Refresco", 15.50);
@@ -22,27 +22,38 @@ public class mainVentas {
         Producto p8 = new Producto("Yogur", 10.25);
         Producto p9 = new Producto("Manzanas", 7.50);
         Producto p10 = new Producto("Café", 40.00);
+        //objeto de orden para importar metodos
+        
+
         
         System.out.println("LIMITE DE PRODUCTOS POR ORDEN: 3");
+        orden1.agregarProd(p1);
+        orden1.agregarProd(p2);
+        orden1.agregarProd(p3);
         
-        Producto [] productos = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10};
-        System.out.println("Lista de prodcutos disponibles:...");
-        System.out.println("----------------------------!---------------------");
+        while (loop==true){
+            System.out.println("----------------------------!---------------------");
+            System.out.println("Que quiee hacer con la lista?"
+                + "1. Mostrtar los productos"
+                + "2. ver el total");
+            System.out.println("----------------------------!---------------------");
+            entrada = scanner.nextInt();
         
-        for (int i = 0; i <productos.length; i++) {
-            System.out.println(productos[i]);
+            switch (entrada){
+                case 1:
+                    orden1.mostrarOrd();
+                    break;
+                case 2:
+                    orden1.calcularTotal();
+                    break;
+                case 99:
+                    loop=false;
+                    break;
+                default:
+                    loop=false;
+            }
         }
-        System.out.println("----------------------------!---------------------");
-        System.out.println("Que quiere hacer? "
-                + "1- Agregar productos"
-                + "2- salir"
-                + "3- mostrar de nuevo productos");
-        entrada = scanner.nextInt();
         
-        switch (entrada){
-            case 1:
-                
-        }
     }
   
 }

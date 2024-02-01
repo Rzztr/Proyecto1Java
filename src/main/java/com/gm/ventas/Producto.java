@@ -1,7 +1,7 @@
 package com.gm.ventas;
 public class Producto {
     
-    private int idProducto=0001;
+    private int idProducto=1;
     private String nombre;
     private double precio;
     private static int contadorId;
